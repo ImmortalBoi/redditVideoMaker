@@ -1,0 +1,23 @@
+{
+  "name": "thumbnailscraper",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "thumbnailmaker",
+  "main": "index.js",
+  "scripts": {
+    "test": "scrape"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/content-type": "1.1.5",
+    "content-type": "1.0.4",
+    "data-uri-to-buffer": "3.0.1",
+    "fetch-blob": "3.1.2",
+    "fs": "0.0.1-security",
+    "node-fetch": "3.0.0",
+    "path": "^0.12.7",
+    "unsplash-js": "7.0.15",
+    "web-streams-polyfill": "3.1.1"
+  }
+}
