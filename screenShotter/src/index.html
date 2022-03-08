@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet"> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="./JS/html2canvas.min.js" ></script>
+    <script defer type="module" src="./JS/script.js" defer></script>  
+    <title>Screenshot Utility</title>
+</head>
+<body>
+
+    <button class = "testButton" id = "testButton">Press to test capture</button>
+    <button class = "thumbnailGetter" id = "thumbnailGetter">Press to get thumbnail</button>
+
+    <div class="border" id="questionCapture">
+        <div class="question">
+            <p class="QuestionAuthor" id="questionAuthor">Posted by [questionAuthor]</p>
+            <b><p class="QuestionText" id="question">[question]</p></b>
+        </div>
+    </div>
+
+    <div class="border" id="QuestionAndAnswer">
+        <div class="answerRoot">
+            <span class="comment">
+                <p class="commentAuthor">Comment Author </p>
+                <p class="commentText">Comment Text</p>
+            </span>
+            <div class="answerChildren">
+                <span class="comment">
+                    <p class="commentAuthor">Comment Author </p>
+                    <p class="commentText">Comment Text</p>
+                </span>
+                <span class="comment">
+                    <p class="commentAuthor">Comment Author </p>
+                    <p class="commentText">Comment Text</p>
+                </span>
+
+                <span class="comment">
+                    <p class="commentAuthor">Comment Author </p>
+                    <p class="commentText">Comment Text</p>
+                </span>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="border2">
+        <div class="thumbnail">
+            <div class="text">
+                <div class="askreddit"><img class="askreddit" src="askreddit_Thumbnail.png"> r/askreddit</div>
+                <div class="questionTextThumbnail">[question]</div>
+            </div>
+            <div><img class="thumbnailImage" src="https://st2.depositphotos.com/6367796/9368/v/950/depositphotos_93683268-stock-illustration-pop-art-comics-icon-crazy.jpg"></div>
+        </div>
+    </div>
+
+    <div class="borderShort" id="shortScreen">
+        <div class="questionShort">
+            <div class="questiondeep">
+                <p class="QuestionAuthor">Posted by [questionAuthor]</p>
+                <b><p class="QuestionText">[question]</p></b>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
