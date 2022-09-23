@@ -59,18 +59,18 @@ const scrapeAskReddit = request('https://old.reddit.com/r/AskReddit/top/?sort=to
             
                     //finding comments
                     const test = $('div.sitetable.nestedlisting').children('div.thing').each((i,el)=>{
-                    //finding root comment
-                    let rootComment = $(el).children("div.entry.unvoted")
-                    let rootCommentText = rootComment.find('div.md').text();
-                    let rootCommentAuthor = 'u/' + rootComment.find('a.author').text()
-                    const newComment = new comment(rootCommentText,rootCommentAuthor);
-            
-             
-                    let subComment = $(el).children("div.child:first").find('div.entry.unvoted').slice(0,3).each((i,el)=>{
-                        let subCommentText = $(el).find('div.md').children('p').text();
-                        let subCommentAuthor = 'u/'+$(el).find('a.author').text();
-                        const newSubComment = new comment(subCommentText,subCommentAuthor);
-                        newComment.addComment(newSubComment);
+                    	//finding root comment
+	                    let rootComment = $(el).children("div.entry.unvoted")
+	                    let rootCommentText = rootComment.find('div.md').text();
+	                    let rootCommentAuthor = 'u/' + rootComment.find('a.author').text()
+	                    const newComment = new comment(rootCommentText,rootCommentAuthor);
+	            
+	             
+	                    let subComment = $(el).children("div.child:first").find('div.entry.unvoted').slice(0,3).each((i,el)=>{
+	                        let subCommentText = $(el).find('div.md').children('p').text();
+	                        let subCommentAuthor = 'u/'+$(el).find('a.author').text();
+	                        const newSubComment = new comment(subCommentText,subCommentAuthor);
+	                        newComment.addComment(newSubComment);
                     });
                     question.addAnswer(newComment);
                     if(i==25){
